@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="person" class="Person" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="car" ref="car"/>
+    </bean>
+
+    <bean id="car" class="Car">
+        <property name="id" value="porsche"/>
+        <property name="person" ref="person"/>
+    </bean>
+<!--    <bean class="CustomBeanFactory"></bean>-->
+<!--    <bean class="CustomBean"></bean>-->
+</beans>
